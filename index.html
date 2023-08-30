@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Information Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Customer Information</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+        
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        
+        <label for="file">Upload Excel Sheet:</label>
+        <input type="file" id="file" name="file" accept=".xlsx, .xls" required><br><br>
+        
+        <input type="submit" value="Upload and Generate Graph">
+    </form>
+    
+    <div id="graph">
+        <img src="{{ graph_path }}" alt="Generated Graph">
+    </div>
+</body>
+</html>
